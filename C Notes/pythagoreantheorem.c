@@ -1,28 +1,32 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     double base, perpedicular, hypotenuse;
 
-    printf("What is the base side? : \n");
+    printf("Enter base side: \n");
     scanf("%lf", &base);
 
-    printf("What is the perpendicular side? : \n");
+    printf("Enter perpendicular side: \n");
     scanf("%lf", &perpedicular);
 
-    printf("What is the perpendicular side? : \n");
+    printf("Enter hypotenuse side: \n");
     scanf("%lf", &hypotenuse);
 
-    double baseandperpsquared = pow(base, 2) + pow(perpedicular, 2);
-    //float step2 = 
-    double hypotenusesquared = pow(hypotenuse, 2);
-    if (baseandperpsquared == hypotenusesquared){
-        printf("It is a right triangle.\n");
+    double baseperpsquared = pow(base, 2) + pow(perpedicular, 2);
+    //float step2 =
+    double hypotsquared = pow(hypotenuse, 2);
+    if (baseperpsquared == hypotsquared)
+    {
+        printf("This is a right triangle.\n");
     }
-    else if (baseandperpsquared > hypotenusesquared){
-        printf("It is an acute triangle.\n");
+    else if (baseperpsquared > hypotsquared)
+    {
+        printf("This is an acute triangle.\n");
     }
-    else if (baseandperpsquared < hypotenusesquared){
-        printf("It is an obtuse triangle");
+    else if (baseperpsquared < hypotsquared)
+    {
+        printf("This is an obtuse triangle");
     }
     return 0;
 }
